@@ -1,4 +1,4 @@
-###############################################################################
+##############################################################################
 #  In settings.py:
 #       DATABASES = {
 #            'default': {
@@ -16,6 +16,12 @@ version: "3.1"
 
 volumes:
     db-data:
+networks:
+ frontend:
+   ipam:
+    config:
+     - subnet: 172.20.0.0/24
+
 
 services:
 
@@ -29,6 +35,9 @@ services:
         - "8000:8000"
       depends_on:
         - mysql
+      networks:
+        frontend:
+          ipv4_address: 172.20.0.5
 
     mysql:
       image: mysql:5.6

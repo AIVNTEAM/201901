@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'educa.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-# DATABASES = {
+#DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
@@ -94,7 +94,7 @@ DATABASES = {
         'NAME': 'docker_django_db',
         'USER': 'dbuser',
         'PASSWORD': 'dbpw',
-        'HOST': 'mysql',
+        'HOST': '192.168.48.2',
         'PORT': '3306',
         'TEST': {
             'NAME': 'docker_django_db_test',

@@ -7,7 +7,7 @@ WORKDIR "/application"
 
 # Install python mysql client
 RUN apt-get update \
-    && apt-get -y install libmysqlclient-dev \
+    && apt-get -y install default-libmysqlclient-dev \
     && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
 
 ADD requirements.txt /application/
